@@ -1,0 +1,60 @@
+body {
+    background-image: url("../images/homepageback.gif.gif");
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center center; 
+    background-attachment: fixed; 
+    margin: 0;
+    height: 100vh; 
+}
+
+.image-button {
+    width: 230px;
+    height: auto;
+    cursor: pointer;
+    border: none;
+    display: block;
+    position: absolute;
+    top: 80px; 
+    right: 70px;
+}
+
+
+.image-wrapper {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    position: fixed; 
+    bottom: 20px; 
+    left: 0;
+    right: 0;
+}
+
+.image-wrapper img {
+    margin: 0 10px; 
+}
+
+
+.fish-image {
+    width: 500px; 
+    height: auto; 
+    position:relative;
+    top: 15px;
+}
+
+.octopus-image {
+    width: 300px; 
+    height: auto; 
+}
+
+.shark-image {
+    width: 300px; 
+    height: auto; 
+}
+
+/* Optionally, add some responsive adjustments if needed */
+@media (max-width: 768px) {
+    .image-wrapper img {
+        width: 120px; /* Smaller size for mobile screens */
+    }
+}

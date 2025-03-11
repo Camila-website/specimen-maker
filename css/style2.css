@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 9918px;
+    background-image: url("../images/background2.jpg");
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: top center;
+    background-attachment: scroll;
+  }
+  
+  .content {
+    padding: 50px;
+    color: white;
+    font-size: 24px;
+  }
+.lionfish-image{
+    width:360px;
+    position:relative;
+    height: auto;
+    top: 350px;
+
+}  
