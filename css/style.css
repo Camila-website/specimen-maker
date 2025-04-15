@@ -1,0 +1,73 @@
+body {
+    background-image: url("../images/homepageback.gif.gif");
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center center; 
+    background-attachment: fixed; 
+    margin: 0;
+    height: 100vh; 
+}
+
+.mute-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+  }
+
+.image-wrapper {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    position: fixed; 
+    bottom: 20px; 
+    left: 0;
+    right: 0;
+}
+
+.image-wrapper img {
+    margin: 0 10px; 
+}
+
+
+.fish-image {
+    width: 500px; 
+    height: auto; 
+    position:relative;
+    top: 15px;
+}
+
+.octopus-image {
+    width: 300px; 
+    height: auto; 
+}
+
+.image-button2 {
+    width: 180px;
+    height: auto;
+    cursor: pointer;
+    border: none;
+    display: block;
+    position: absolute;
+    top: 60px;   
+    right: 65px; 
+    z-index: 1;  
+  }
+
+.shark-image {
+    width: 300px; 
+    height: auto; 
+    position:relative;
+    z-index: 2;
+}
+
+
+@media (max-width: 768px) {
+    .image-wrapper img {
+        width: 120px; 
+    }
+}

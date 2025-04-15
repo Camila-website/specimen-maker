@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jar it</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body> 
+    <button id="mute-button" class="mute-button">🔊</button>
+
+    <audio id="bg-music" autoplay loop>
+        <source src="music/background-music.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    <script>
+        
+const bgMusic = new Audio("music/background-music.mp3");
+bgMusic.loop = true;
+bgMusic.volume = 0.5;
+
+
+const bubbleSound = new Audio("sounds/bubble.mp3");
+bubbleSound.volume = 0.1;
+
+
+document.addEventListener("click", () => {
+  if (bgMusic.paused) {
+    bgMusic.play();
+  }
+  bubbleSound.currentTime = 0;
+  bubbleSound.play();
+}, { once: false });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const muteButton = document.getElementById("mute-button");
+
+  muteButton.addEventListener("click", () => {
+    bgMusic.muted = !bgMusic.muted;
+    muteButton.textContent = bgMusic.muted ? "🔇" : "🔊";
+  });
+});
+
+    </script>
+    <a href="secondpage.html">
+        <img src="images/startbutton.gif" alt="start" class="image-button2">
+        </a>
+
+     
+    <div class="image-wrapper">
+        <img src="images/fishhome.png" alt="Fish" class="fish-image">
+        <img src="images/octohome.png" alt="Octopus" class="octopus-image">
+        <img src="images/sharkhome.png" alt="Shark" class="shark-image">
+    </div>
+</body>
+</html>

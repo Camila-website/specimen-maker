@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jar it!</title>
+  <link rel="stylesheet" href="css/style4.css" />
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="js/audio.js" defer></script>
+</head>
+
+<body>
+    <button onclick="goBack()" class="back-button">
+        <img src="images/back.png" alt="Back" class="back-button">
+      </button>
+  <button id="mute-button" class="mute-button">🔊</button>
+  <h1>Choose jar</h1>
+
+  <div class="jar-container">
+    <a href="#" class="jar-link">
+      <img src="images/jar1.png" alt="jar1" class="jar-image" id="jar1" />
+    </a>
+    <a href="#" class="jar-link">
+      <img src="images/jar2.png" alt="jar2" class="jar-image" id="jar2" />
+    </a>
+    <a href="#" class="jar-link">
+      <img src="images/jar3.png" alt="jar3" class="jar-image" id="jar3" />
+    </a>
+  </div>
+
+  
+  <div id="fish-container" class="fish-container hide">
+    <img id="caughtFish" src="" alt="Caught Fish" class="caught-fish-image" />
+  </div>
+
+  
+  <div id="fish-name-container" class="fish-name-container hide">
+    <label id="name-label" for="fish-name">Name Me</label>
+    <input type="text" id="fish-name" placeholder="Enter fish name" />
+  </div>
+
+  <script>
+    const caughtFish = localStorage.getItem("caughtFish");
+    const caughtFishImg = document.getElementById("caughtFish");
+    const fishContainer = document.getElementById("fish-container");
+    const fishNameContainer = document.getElementById("fish-name-container");
+    const fishNameInput = document.getElementById("fish-name");
+    const nameLabel = document.getElementById("name-label");
+    const jarImages = document.querySelectorAll(".jar-image");
+    const heading = document.querySelector("h1");
+
+    
+    if (caughtFish) {
+      caughtFishImg.src = caughtFish;
+    }
+
+    jarImages.forEach((jar) => {
+      jar.addEventListener("click", () => {
+        
+        jarImages.forEach((otherJar) => {
+          if (otherJar !== jar) {
+            otherJar.classList.add("hidden");
+          }
+        });
+
+        
+        jar.classList.add("enlarged");
+
+        
+        document.body.appendChild(fishContainer);
+        fishContainer.classList.remove("hide");
+        fishContainer.style.position = "fixed";
+        fishContainer.style.top = "50%";
+        fishContainer.style.left = "50%";
+        fishContainer.style.transform = "translate(-50%, -50%)";
+
+        
+        heading.style.display = "none";
+        fishNameContainer.classList.remove("hide"); 
+      });
+    });
+
+    fishNameInput.addEventListener("change", () => {
+      const name = fishNameInput.value.trim();
+      if (name !== "") {
+        nameLabel.textContent = ` ${name}`;
+        confetti({
+          particleCount: 100,
+          spread: 70,
+          origin: { y: 0.6 },
+        });
+
+        
+        fishNameContainer.classList.add("hide");
+      }
+    });
+  </script>
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

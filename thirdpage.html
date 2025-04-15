@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dissect</title>
+  <link rel="stylesheet" href="css/style3.css" />
+  
+</head>
+<body>
+  
+  <button onclick="goBack()" class="back-button">
+    <img src="images/back.png" alt="Back" class="back-button" />
+  </button>
+  <button id="mute-button" class="mute-button">🔊</button>
+
+  <div class="content">
+    <h1>Fish Caught!</h1>
+    <p><img src="images/dissect.png" alt="dissect" class="dissect-image" /></p>
+
+    
+    <div class="fish-container">
+      <a href="fourthpage.html">
+        <img id="result-img" src="" alt="Caught Fish" class="result-image" />
+      </a>
+      
+      <img src="images/organs.png" class="organs" alt="organs" onclick="this.style.display='none'" />
+    </div>
+  </div>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const fish = urlParams.get('fish');
+    const resultImg = document.getElementById('result-img');
+
+    
+    if (fish === 'lionfish') {
+        resultImg.src = 'images/dead2.png';
+    } else if (fish === 'pufferfish') {
+        resultImg.src = 'images/dead1.png';
+    } else if (fish === 'randofish') {
+        resultImg.src = 'images/dead3.png';
+    } else if (fish === 'shark') {
+        resultImg.src = 'images/dead4.png';
+    } else if (fish === 'sunfish') {
+        resultImg.src = 'images/dead5.png';
+    } else if (fish === 'stingray') {
+        resultImg.src = 'images/dead6.png';
+    } else if (fish === 'eel') {
+        resultImg.src = 'images/dead7.png';
+    } else if (fish === 'flounder') {
+        resultImg.src = 'images/dead8.png';
+    } else if (fish === 'eyefish') {
+        resultImg.src = 'images/dead9.png';
+    } else if (fish === 'weirdfish') {
+        resultImg.src = 'images/dead10.png';
+    } else if (fish === 'lobster') {
+        resultImg.src = 'images/dead11.png';
+    } else if (fish === 'tuna') {
+        resultImg.src = 'images/dead12.png';
+    } else if (fish === 'vampsquid') {
+        resultImg.src = 'images/dead15.png';
+    } else if (fish === 'oarfish') {
+        resultImg.src = 'images/dead14.png';
+    } else if (fish === 'headfish') {
+        resultImg.src = 'images/dead16.png';
+    }
+
+    
+    localStorage.setItem('caughtFish', resultImg.src);
+  </script>
+
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+  </script>
+</body>
+</html>

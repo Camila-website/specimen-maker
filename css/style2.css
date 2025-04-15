@@ -1,0 +1,236 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 9918px;
+  cursor: url('images/cursor2.png'), auto;
+  background-image: url("../images/background2.jpg");
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: top center;
+  background-attachment: scroll;
+}
+
+
+.mute-button {
+  width: 100px;
+  height: auto;
+  background: none;
+  border: none;
+  cursor: pointer;
+  left: 90%;
+  top: 10px;
+}
+
+.back-button {
+  width: 100px;
+  height: auto;
+  transition: transform 0.3s ease;
+  left: 80%;
+  top:10px;
+  position: absolute;
+}
+
+.back-button:hover .back-arrow {
+  transform: scale(1.1);
+}
+
+.mute-button {
+  font-size: 24px;
+  transition: transform 0.3s ease;
+}
+
+.mute-button:hover {
+  transform: scale(1.1);
+}
+.catch-image {
+  width: 300px;
+  position: absolute;
+  height: auto;
+  top: 10%;
+  cursor: pointer;
+  left: 300px;
+}
+
+
+.content {
+  padding: 50px;
+  color: white;
+  font-size: 24px;
+}
+
+
+img[src*="images/"] {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+img[src*="images/"]:hover {
+  transform: scale(1.2); 
+  filter: brightness(1.2) drop-shadow(0 0 15px rgba(0, 255, 255, 0.7)); /
+}
+
+
+.lionfish-image {
+  width: 400px;
+  position: relative;
+  height: auto;
+  top: 600px;
+  cursor: pointer;
+  animation: swim 4s ease-in-out infinite;
+}
+
+.pufferfish-image {
+  width: 500px;
+  position: relative;
+  height: auto;
+  top: 650px;
+  cursor: pointer;
+  animation: swim 4s ease-in-out infinite;
+}
+
+.flounder-image {
+  width: 500px;
+  position: relative;
+  height: auto;
+  top: 700px;
+  cursor: pointer;
+  left: 150px;
+  animation: swim 4s ease-in-out infinite;
+}
+
+.randofish-image {
+  width: 500px;
+  position: relative;
+  height: auto;
+  top: 400px;
+  cursor: pointer;
+  left: 150px;
+  animation: swim 4s ease-in-out infinite;
+}
+
+.shark-image {
+  width: 600px;
+  position: relative;
+  height: auto;
+  top: 500px;
+  cursor: pointer;
+  left: 340px;
+  animation: swim 4s ease-in-out infinite;
+}
+
+.sunfish-image {
+  width: 500px;
+  position: relative;
+  height: auto;
+  top: 800px;
+  cursor: pointer;
+  left: 60px;
+  animation: swim 4s ease-in-out infinite;
+}
+
+.stingray-image {
+  width: 500px;
+  position: relative;
+  height: auto;
+  top: 300px;
+  cursor: pointer;
+  left: 280px;
+  animation: swim 4s ease-in-out infinite;
+}
+
+.eel-image {
+  width: 800px;
+  position: relative;
+  height: auto;
+  top: 800px;
+  cursor: pointer;
+  left: 0%;
+  animation: swim 4s ease-in-out infinite;
+}
+
+.eyefish-image {
+  width: 400px;
+  position: relative;
+  height: auto;
+  top: 200px;
+  cursor: pointer;
+  left: 100px;
+  animation: swim 4s ease-in-out infinite;
+}
+
+.weirdfish-image {
+  width: 800px;
+  position: relative;
+  height: auto;
+  top: 600px;
+  cursor: pointer;
+  left: 100px;
+  animation: swim 4s ease-in-out infinite;
+}
+
+.lobster-image {
+  width: 500px;
+  position: relative;
+  height: auto;
+  top: 500px;
+  cursor: pointer;
+  left: 100px;
+  animation: swim 4s ease-in-out infinite;
+}
+
+.tuna-image {
+  width: 700px;
+  position: relative;
+  height: auto;
+  top: 900px;
+  cursor: pointer;
+  left: 100px;
+  animation: swim 4s ease-in-out infinite;
+}
+
+.vampsquid-image {
+  width: 700px;
+  position: relative;
+  height: auto;
+  top: 4000px;
+  cursor: pointer;
+  left: 90px;
+  animation: swim 4s ease-in-out infinite;
+}
+
+.oarfish-image {
+  width: 800px;
+  position: relative;
+  height: auto;
+  top: 300px;
+  cursor: pointer;
+  left: 300px;
+  animation: swim 4s ease-in-out infinite;
+}
+
+.angler-image {
+  width: 600px;
+  position: relative;
+  height: auto;
+  top: 2000px;
+  cursor: pointer;
+  left: 600px;
+  animation: swim 4s ease-in-out infinite;
+}
+
+.headfish-image {
+  width: 500px;
+  position: relative;
+  height: auto;
+  top: 700px;
+  cursor: pointer;
+  left: 100px;
+  animation: swim 4s ease-in-out infinite;
+}
+
+@keyframes swim {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(30px); }
+  100% { transform: translateX(0); }
+}
+
+

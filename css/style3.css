@@ -1,0 +1,74 @@
+body {
+    background-image: url(../images/background3.jpg);
+    background-repeat: no-repeat;
+    background-size: contain; 
+    background-position: center center; 
+    background-attachment: fixed; 
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.dissect-image {
+    width: 300px;
+    position: absolute;
+    height: auto;
+    top: 20%;
+    cursor: pointer;
+    left: 10px;
+    animation: swim 4s ease-in-out infinite;
+}
+
+.back-button {
+    width: 50px;
+    height: auto;
+    transition: transform 0.3s ease;
+    left: 90%;
+    top: 20px;
+    position: absolute;
+}
+
+.back-button:hover .back-arrow {
+    transform: scale(1.1);
+}
+
+.mute-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.fish-container {
+    position: relative;
+    display: inline-block;
+}
+
+.result-image {
+    width: 900px;
+    position: relative;
+    height: auto;
+    top: 0px;
+    cursor: pointer;
+    left: 300px;
+}
+
+.organs {
+    position: absolute;
+    top: 200px;     /* Adjust this as needed */
+    left: 500px;    /* Adjust this as needed */
+    width: 400px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    z-index: 10;
+}
+
+.organs:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 5px red);
+}
